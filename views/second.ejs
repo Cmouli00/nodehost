@@ -1,0 +1,69 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even){background-color: #f2f2f2}
+        </style>
+        </head>
+
+<body>
+  
+    <h1>DATA</h1>
+    <div>
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SI NO.</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Unit</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var item in data) { %>
+                        <tr>
+                            <td>
+                                <%=data[item].id%>
+                            </td>
+                            <td>
+                                <%=data[item].description%>
+                            </td>
+                            <td>
+                                <%=data[item].qty%>
+                            </td>
+                            <td>
+                                <%=data[item].rate%>
+                            </td>
+                            <td>
+                                <%=data[item].unit%>
+                            </td>
+                            <td>
+                                <%=data[item].amount%>
+                            </td>
+                            <td>
+                                <%=data[item].date%>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
